@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.page {
+  width: 50%;
+  height: 70%;
+  min-height: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.list {
+  width: 100%;
+  list-style-type: decimal; /* Numerotare corectă */
+  list-style-position: inside; /* Face ca numerele să fie în interiorul listei */
+  padding-left: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.task {
+  font-size: 18px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.5;
+  display: flex;
+  align-items: center; /* Menține alinierea corectă */
+  padding: 5px 10px;
+  gap: 10px; /* Adaugă un mic spațiu între elemente */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input {
+  font-size: 16px;
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.card {
-  padding: 2em;
+.header {
+  font-size: 16px;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.task-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 80px; /* Asigură o zonă fixă pentru butoane */
+  justify-content: flex-end; /* Menține butoanele aliniate la dreapta */
 }
+
+.checkbox {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.task-number {
+  min-width: 30px; /* Se asigură că numerele nu se mișcă */
+  text-align: right;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.task-text {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 80%; /* Evită ca textul să ocupe toată lățimea și să împingă butoanele */
+}
+
+.edit-input {
+  flex: 1; /* Ocupă tot spațiul disponibil */
+  font-size: 18px; /* Păstrează dimensiunea normală a textului */
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  background: none;
+}
+
